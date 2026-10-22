@@ -1,0 +1,14 @@
+name: Idle Drill
+
+on:
+  workflow_dispatch:
+
+jobs:
+  idle:
+    name: Idle for about 15 minutes
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deliberately idle for about 15 minutes
+        run: |
+          echo "Idling for ~15 minutes so this run can be cancelled mid-flight."
+          sleep 900
